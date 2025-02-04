@@ -1,0 +1,297 @@
+body {
+    background-color: #e6f2ff;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-container {
+    display: flex;
+    flex: 1;
+}
+
+.image-section {
+    flex: 1;
+    background-image: url('img/medical-background.jpeg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+
+}
+
+.form-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+#container {
+    background-color: white;
+    width: 400px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+#aprovados {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#cpf,
+#btn-buscar {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+#cpf {
+    margin-bottom: 15px;
+    border: 2px solid #e0e0e0;
+    text-align: center;
+    transition: border-color 0.3s ease;
+}
+
+#cpf:focus {
+    outline: none;
+    border-color: #1e88e5;
+    box-shadow: 0 0 0 3px rgba(30, 136, 229, 0.1);
+}
+
+#btn-buscar {
+    background-color: #1e88e5;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+#btn-buscar:hover {
+    background-color: #1565c0;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(21, 101, 192, 0.2);
+}
+
+#btn-buscar:active {
+    transform: translateY(0);
+}
+
+#resultado {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 16px;
+    display: none;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    line-height: 1.6;
+}
+
+footer {
+    text-align: center;
+    color: #7f8c8d;
+    padding: 20px;
+    background-color: white;
+}
+
+/* Responsividade */
+/* Desktop grande */
+@media (min-width: 1200px) {
+    .form-section {
+        padding: 40px;
+    }
+
+    #container {
+        width: 500px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+}
+
+/* Tablets e notebooks */
+@media (max-width: 1024px) {
+    .main-container {
+        flex-direction: row;
+    }
+
+    .form-section {
+        padding: 30px;
+    }
+
+    #container {
+        width: 90%;
+        max-width: 450px;
+    }
+
+    h1 {
+        font-size: 2em;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+}
+
+/* Tablets menores e celulares grandes */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+    }
+
+    .image-section {
+        min-height: 250px;
+    }
+
+    .form-section {
+        padding: 20px;
+    }
+
+    #container {
+        width: 90%;
+        max-width: 400px;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+        margin-top: 15px;
+        margin-bottom: 25px;
+    }
+
+    footer {
+        padding: 15px;
+    }
+}
+
+/* Celulares médios */
+@media (max-width: 576px) {
+    .image-section {
+        min-height: 200px;
+    }
+
+    .form-section {
+        padding: 15px;
+    }
+
+    #container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    #cpf,
+    #btn-buscar {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    #resultado {
+        padding: 15px;
+        font-size: 14px;
+    }
+}
+
+/* Celulares pequenos */
+@media (max-width: 375px) {
+    .image-section {
+        min-height: 150px;
+    }
+
+    .form-section {
+        padding: 10px;
+    }
+
+    #container {
+        width: 100%;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    h1 {
+        font-size: 1.3em;
+        margin-top: 8px;
+        margin-bottom: 15px;
+    }
+
+    #cpf,
+    #btn-buscar {
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    #resultado {
+        margin-top: 15px;
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    footer {
+        padding: 10px;
+        font-size: 12px;
+    }
+}
+
+/* Ajuste para telas muito pequenas */
+@media (max-width: 320px) {
+    h1 {
+        font-size: 1.2em;
+    }
+
+    #container {
+        padding: 8px;
+    }
+
+    #cpf,
+    #btn-buscar {
+        padding: 7px;
+        font-size: 12px;
+    }
+}
+
+/* Ajuste para orientação paisagem em dispositivos móveis */
+@media (max-height: 500px) and (orientation: landscape) {
+    .main-container {
+        flex-direction: row;
+    }
+
+    .image-section {
+        min-height: 100vh;
+    }
+
+    .form-section {
+        padding: 10px;
+    }
+
+    h1 {
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+
+    #container {
+        padding: 15px;
+    }
+}

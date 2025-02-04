@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos-agendamento.css">
+    <title>Agendamento de Consultas</title>
+</head>
+
+
+
+
+<body>
+    <div class="main-container">
+        <div class="image-section"></div>
+        <div class="form-section">
+            <h1>Verificação de Agendamento</h1>
+            <section id="container">
+                <div id="aprovados">
+                    <input type="text" name="cpf" id="cpf" placeholder="Digite seu CPF" maxlength="11"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57" onfocus="limparResultado()">
+                    <button id="btn-buscar" onclick="verificarAgendamento()">Verificar Consulta</button>
+                </div>
+                <div id="resultado">Resultado</div>
+            </section>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; Clínica Saúde Total</p>
+    </footer>
+    <script src="script-agendamento.js"></script>
+</body>
+
+</html>
